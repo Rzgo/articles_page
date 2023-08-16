@@ -1,0 +1,29 @@
+.addArticleForm {
+  width: 90%;
+  &__formItem {
+    margin: 10px;
+    width: 100%;
+
+    label {
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    & :global {
+      .ant-input {
+        width: 100%;
+      }
+    }
+  }
+
+  &__buttonsWrapper {
+    padding-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+}
