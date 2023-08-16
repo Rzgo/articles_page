@@ -16,19 +16,8 @@ export const filterByDate = (
 
 export const getOptions = (arr: IArticle[], type: 'topic' | 'author') => {
   return arr.reduce((acc, item) => {
-    switch (type) {
-      case 'topic': {
-        if (!acc.find((article) => article.topic === item.topic)) {
-          acc.push(item);
-        }
-        break;
-      }
-      case 'author': {
-        if (!acc.find((article) => article.author === item.author)) {
-          acc.push(item);
-        }
-        break;
-      }
+    if (!acc.find((article) => article[type] === item[type])) {
+      acc.push(item);
     }
     return acc;
   }, [] as IArticle[]);
