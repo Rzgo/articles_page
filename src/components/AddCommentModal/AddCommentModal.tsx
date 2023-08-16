@@ -36,7 +36,7 @@ export const AddCommentModal: FC = (): JSX.Element => {
         <h3 className="addCommentModal__title">Добавить комментарий</h3>
         <Form layout="vertical" onFinish={handleFinish}>
           {formCommentArray.map((item) => (
-            <FormGenerator article={item} />
+            <FormGenerator article={item} key={item.label} />
           ))}
           <div className="addArticleForm__buttonsWrapper">
             <Form.Item>

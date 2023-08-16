@@ -63,7 +63,7 @@ export const AddArticleForm: FC = (): JSX.Element => {
         {currentFormArr.length ? (
           <Form layout="vertical" onFinish={handleFinish}>
             {currentFormArr.map((item) => (
-              <FormGenerator article={item} key={nanoid()} />
+              <FormGenerator article={item} key={item.label} />
             ))}
             <div className="addArticleForm__buttonsWrapper">
               <Form.Item>
